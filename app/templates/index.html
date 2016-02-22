@@ -1,20 +1,19 @@
-{# _myapp/templates/index.html_ #}
+{# _myapp/templates/index.html_ #} 
 
-{% extends "base.html" %}
+{% extends "base.html" %} 
 
-{% block title %}Index{% endblock %}
+{% block title %}Index{% endblock %} 
 
-{% block head %}
-{{ super() }}
- 
-{% endblock %}
+{% block head %} {{ super() }} {% endblock %} 
 
-{% block content %}
-<div class="page-header">
-	<h1>Index</h1>
-	<p class="important">
-	  Welcome to my awesome homepage.
-	</p>
-      
-</div>    
+{% block page_content %}
+<div class="header">
+  <h2>Index</h2>
+  <p class="important">
+    Welcome to my awesome homepage.
+  </p>
+</div>
+
+<div id="chart"></div>
+
 {% endblock %}

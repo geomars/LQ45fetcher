@@ -34,7 +34,7 @@
         <div class="container">
 			<div class="navbar"> 
 			{% block navbar %} 
-			  {% include "nav.html" ignore missing %} 
+			  {% include "_nav.html" ignore missing %} 
 			{% endblock %}
 			 </div>			
 			<div id="content"> 
@@ -48,8 +48,8 @@
 			{% block footer %}			
 				<div class="row">
 					<div class="col-md-12">
-						<p>&copy; Copyright 2015 by <a href="http://127.0.0.1:5000/">me</a>.</p>
-						<p>Based on <a href="http://getbootstrap.com" rel="nofollow">Bootstrap</a></p>
+						<p>&copy; Copyright 2016 by <a href="http://127.0.0.1:5000/">me</a>.</p>
+						<p> </p>
 					</div>
 				</div>
 			</div>	
@@ -59,11 +59,14 @@
                
 			{% block scripts %} 
 			<!-- jQuery -->
-			<script type="text/javascript" src="{{ url_for('static', filename='js/jquery/jquery.min.js') }}"></script>
+			<script src="{{ url_for('static', filename='js/jquery/jquery.min.js') }}"></script>
 			<!-- Bootstrap JavaScript -->
-			<script type="text/javascript" src="{{ url_for('static', filename='js/bootstrap/bootstrap.min.js') }}"></script>	
-			<!-- Bootswatch JavaScript -->
-			<script type="text/javascript" src="{{ url_for('static', filename='js/bootstrap/bootswatch.js') }}"></script>		 
+			<script src="{{ url_for('static', filename='js/bootstrap/bootstrap.min.js') }}"></script>
+			<!-- d3 JavaScript -->
+			<script src="{{ url_for('static', filename='js/d3/d3.min.js') }}"></script>				
+            <!-- Custom JavaScript -->
+			<script src="{{ url_for('static', filename='js/app.js') }}"></script>
+
 			{% endblock %}
 
 		{% endblock %}
